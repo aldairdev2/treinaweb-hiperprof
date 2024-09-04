@@ -1,12 +1,22 @@
-import { PageTitleContainer, PageTitleStyled } from "./styles";
+import { title } from "process";
+import {
+    PageTitleContainer, 
+    PageTitleStyled,
+    PageSubtitleStyled } from "./styles";
 
-const PageTitle = () => {
+export interface PageTitleProps {
+    title: string;
+    subtitle?: string;
+}
+
+const PageTitle:React.FC<PageTitleProps> = ({title, subtitle}) => {
     return (
         <PageTitleContainer>
-            <PageTitleStyled>title</PageTitleStyled>
+            <PageTitleStyled color={"primary"}>{title}</PageTitleStyled>
+            <PageSubtitleStyled>{subtitle}</PageSubtitleStyled>
         </PageTitleContainer>
     );
 };
 
 
-export default PageTitle;
+export default PageTitle;   

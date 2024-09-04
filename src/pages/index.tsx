@@ -3,7 +3,7 @@ import PageTitle  from "@components/data_display/PageTitle";
 export default function Home() {
   return (
     <div>
-      <PageTitle />
+      <PageTitle title="TITULO" subtitle="subtitulo exemplo"/>
     </div>
   )
 }
